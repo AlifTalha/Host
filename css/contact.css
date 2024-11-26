@@ -1,0 +1,52 @@
+.contact-section {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.contact-section h1 {
+    font-weight: bold;
+    font-family: 'Roboto Mono', monospace;
+    color:  var(--lightmagenta);
+    padding-top: 20px;
+}
+
+.contact-content {
+    padding-bottom: 18px;
+}
+
+.contact-content-form {
+    margin-top: 30px;
+    padding: 10px 15%;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-content-form .form-control {
+    color: var(--warning);
+    background-color: transparent;
+}
+
+.contact-content-form label {
+    color: var(--lightmagenta);
+    background-color: transparent;
+}
+
+.contact-content-form .form-control {
+    border: 2px solid var(--lightmagenta);
+}
+
+.contact-content-form button {
+    margin: 10px;
+}
+
+.contact-content-social {
+    color: var(--yellow);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-content-social-items a.btn {
+    border-radius: 50%;
+    border: 2px solid;
+}

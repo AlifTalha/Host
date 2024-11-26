@@ -1,0 +1,85 @@
+.project-section { margin-top: 40px; font-size: 18px; }
+.project-section h1 {
+    font-weight: bold;
+    font-family: 'Roboto Mono', monospace;
+    color:  #e75eff;
+    padding-top: 20px;
+}
+
+#project-section-content-first,
+#project-section-content-second,
+#project-section-content-third {
+    padding: 48px 24px;
+    border: var(--lightmagenta) 2px solid;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.project-section-subcontent {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    vertical-align: middle;
+    text-align: center;
+    justify-content: space-evenly;
+}
+#project-section-content-second .project-section-subcontent { flex-direction: row; }
+
+#project-section-subcontent-img {
+    display: block;
+    border-radius: 22px;
+    box-shadow:  5px 5px 0px #a201ff, -5px -5px 0px #b330ff;
+}
+
+#project-section-subcontent-text h2 {
+    line-height: 1;
+    font-weight: 900;
+    margin-bottom: 19px;
+    color: var(--yellow);
+}
+
+#project-section-subcontent-text ul li {
+    text-align: left;
+    font-size: 14px;
+    line-height: 23px;
+    margin-left: 10px;
+}
+
+#project-section-subcontent-buttons {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+#project-section-subcontent-buttons button {
+    padding-right: 24px;
+    padding-left: 24px;
+}
+
+#project-section-subcontent-buttons a {
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#project-section-subcontent-buttons svg {
+    padding-bottom: 2px;
+    margin-right: 5px;
+}
+
+#project-section-content-third p {
+    font-size: small;
+    font-weight: 700;
+    font-style: italic;
+    text-align: center;
+    color: var(--yellow);
+}
+
+@media all and (max-width: 405px) { #project-section-subcontent-buttons a { font-size: 18px; } }
+@media all and (max-width: 320px) { #project-section-subcontent-buttons a { font-size: 15px; } }
+@media all and (max-width: 991px) {
+    #project-section-subcontent-text ul { padding-left: 0; }
+    #project-section-subcontent-text ul li { margin-bottom: 10px; }
+}

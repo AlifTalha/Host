@@ -1,0 +1,149 @@
+.intro-section-container {
+    margin: 0;
+    padding: 16px;
+    justify-content: center;
+}
+
+.intro-porfolio-nav-item {
+    width: 100%;
+    justify-content: center;
+    font-family: 'Roboto Slab', serif;
+}
+
+.intro-porfolio-nav-item > .nav-link {
+    font-size: 17px;
+    color: var(--warning);
+    background-color: black;
+}
+
+@media all and (min-width: 769px) {
+    .intro-porfolio-nav-item > .nav-link { border-bottom: .25rem solid transparent; }
+    .intro-porfolio-nav-item > .nav-link:hover, .intro-porfolio-nav-item > .nav-link:focus { border-bottom: .25rem solid var(--warning); }
+}
+
+.intro-porfolio-text {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+    font-family: 'Domine', serif;
+    
+}
+
+.intro-porfolio-text li {
+    display: block;
+    font-weight: 1000;
+    text-align: center;
+    font-size: 30px;
+}
+
+.intro-porfolio-text li:first-child { font-size: 20px; }
+.intro-porfolio-text li:first-child,
+.intro-porfolio-text li:nth-child(2) {
+    background: linear-gradient(to left, #9d47ff 0%, #e944ff 52%, #ff21b9 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.intro-porfolio-text li:last-child a {
+    font-weight: 500;
+    font-size: 16px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.intro-porfolio-text li h6 {
+    color: var(--warning);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 13px;
+}
+
+.intro-porfolio-text li#list-icons-social {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 16px;
+}
+
+.intro-porfolio-text li#list-icons-social a { margin: 5px; }
+
+#intro-section-main-content {
+    margin: auto;
+    text-align: center;
+}
+
+.intro-porfolio-image {
+    background-image: url("/image/background_magenta(1).svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.intro-porfolio-image img {
+    height: 150%;
+    width: 100%;
+    border-radius: 0 0 44.2% 43%;
+}
+
+@media all and (min-width: 1000px) {
+    .intro-porfolio-text li { font-size: 55px; }
+    .intro-porfolio-text li:first-child { font-size: 30px; }
+    .intro-porfolio-text li h6 { font-size: 18px; }
+}
+
+@media all and (min-width: 1200px) {
+    .intro-porfolio-image img { width: 90%; height: auto; }
+
+    .intro-porfolio-text li {
+        font-size: 60px;
+        text-align: left;
+        padding-left: 40px;
+    }
+    .intro-porfolio-text li#list-icons-social { display: flex; }
+}
+
+/* RESPONSIVE HAMBURGER ICONS MENU */
+.intro-porfolio-nav-menu { display: none; background-color: black; }
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+@media all and (max-width: 1200px) {
+    .intro-porfolio-text { padding-top: 20px; }
+    .intro-porfolio-nav-item {
+        position: absolute;
+        left: -100%;
+        top: 3rem;
+        flex-direction: column;
+        background-color: black;
+        color: white;
+        text-align: center;
+        width: 100%;
+        transition: 0.3s;
+        text-decoration: none;
+        z-index: 10;
+    }
+
+    .intro-porfolio-nav-item.active { left: 0; }
+    .intro-porfolio-nav-item.active > .nav-link { border-bottom: black; }
+    .intro-porfolio-nav-item.active > .nav-link:hover, .intro-porfolio-nav-item.active > .nav-link:focus { border-bottom: unset; }
+
+    .intro-porfolio-nav-menu {
+        display: block;
+        cursor: pointer;
+        float: left;
+        background-color: black;
+    }
+    .intro-porfolio-nav-menu.active .bar:nth-child(2) { opacity: 0; }
+    .intro-porfolio-nav-menu.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .intro-porfolio-nav-menu.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
