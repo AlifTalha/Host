@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/resume.css" />
     <link rel="stylesheet" href="css/project.css" />
     <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/extra-curricular.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -31,6 +32,7 @@
             <a class="nav-link" href="#about">About</a>
             <a class="nav-link" href="#resume">Resume</a>
             <a class="nav-link" href="#project-section">Projects</a>
+            <a class="nav-link" href="#extra-curricular">Extra Curricular</a>
             <a class="nav-link" href="#contact">Contact</a>
           </nav>
           <div class="intro-porfolio-nav-menu">
@@ -45,7 +47,62 @@
           <ul class="intro-porfolio-text">
             <li>HI, I'M</li>
             <li>ALIF HOSSAIN TALHA</li>
-            <li><h6>"A full-stack web developer and software engineer"</h6></li>
+            <li><h6>"Web Developer and Software Engineer"</h6></li>
+             
+            <li>
+              <h6 id="shufflingText" style="display: inline-block; overflow: hidden; white-space: nowrap; border-right: 2px solid black;">
+                A full-stack web developer and software engineer
+              </h6>
+            </li>
+            
+            <script>
+              const textElement = document.getElementById("shufflingText");
+              const words = ["A full-stack", "web developer", "and software engineer"]; 
+              let currentIndex = 0;
+            
+              function switchWord() {
+              
+                textElement.textContent = words[currentIndex];
+            
+             
+                currentIndex = (currentIndex + 1) % words.length;
+              }
+            
+          
+              const styleSheet = document.createElement("style");
+              styleSheet.innerHTML = `
+                #shufflingText {
+                  animation: slideIn 1.5s ease-in-out;
+                }
+            
+                @keyframes slideIn {
+                  0% {
+                    transform: translateX(-100%);
+                    opacity: 0;
+                  }
+                  50% {
+                    transform: translateX(0%);
+                    opacity: 1;
+                  }
+                  100% {
+                    transform: translateX(0%);
+                    opacity: 1;
+                  }
+                }
+              `;
+              document.head.appendChild(styleSheet);
+            
+           
+              setInterval(() => {
+                textElement.classList.remove("slideIn");
+                void textElement.offsetWidth; 
+                textElement.classList.add("slideIn");
+                switchWord();
+              }, 1000); 
+            </script>
+            
+
+            
             <li id="list-icons-social">
               <a href="https://www.linkedin.com/in/aliftalha/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#FFD54F" class="bi bi-linkedin" viewBox="0 0 16 16">
@@ -528,8 +585,84 @@
           </div>
         </div>
       </div>
+
+
+
+
+       <!-- 7th PROJECT-->
+       <div class="container" id="project-section-content-second" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="project-section-subcontent row g-5">
+          <div class="col-12 col-lg-6" id="project-section-subcontent-text">
+            <h2>Movie Database Management System (Asp.Net) </h2>
+            <ul>
+              <li><strong>Technologies Used: C#, Web Api Framework, MS SQL Server Management </strong></li>
+              <li>The project uses C# for backend logic, MS SQL Server for database management, and the 3 tier(BLL, DAL, PL )for structured development. </li>
+              <li>Key features include customer registration, Movie scheduling, Favorite list, payment processing, and real-time availability checks.</li>
+              <li>User can select favorite list and watch later option. </li>
+              <li>In this project there are User Rating Option and Search by Movie Name and Genre.</li>
+              
+            </ul>
+            <div id="project-section-subcontent-buttons">
+              <button class="btn btn-md btn-magenta-outline">
+                <a href="https://github.com/AlifTalha/Movie-Database-Manage-Asp.Net-ment" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
+                    <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z"/>
+                  </svg>
+                  Website
+                </a>
+              </button>
+              <button class="btn btn-md btn-magenta-outline">
+                <a href="https://github.com/AlifTalha/Movie-Database-Manage-Asp.Net-ment" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                  </svg>
+                  Source
+                </a>
+              </button>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <img src="image/movie.png" id="project-section-subcontent-img" class="img-fluid" width="100%" height="100%" alt="weather-app" loading="lazy"/>
+          </div>
+        </div>
+      </div>
     </section>
 
+
+<!-- EXTRA-CURRICULAR ACTIVITIES AND CERTIFICATIONS SECTION -->
+<section id="extra-curricular" class="container contact-section">
+  <h1 class="text-center fw-bold">Achievements & Certifications</h1>
+
+  <!-- CERTIFICATIONS AND AWARDS LIST -->
+  <div data-aos="fade-up">
+    <div class="certification-content">
+      <h2 class="text-center mb-5 text-magenta">My Achievements & Certifications</h2>
+      <div class="certifications-wrapper">
+        <ul class="certifications-list">
+          <li class="fade-item">Academic Dean Award (AIUB)</li>
+          <li class="fade-item">Academic Scholarship (AIUB)</li>
+          <li class="fade-item">Cisco Networking Academy Certification - Issued June 2021</li>
+          <li class="fade-item">Graphic Design Certification (SAMS IT CENTER)</li>
+          <li class="fade-item">Dubash Math Olympiad Certificate (2019)</li>
+          <li class="fade-item">Completed Associate Data Scientist Courses in Python on DataCamp</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JavaScript for Animation -->
+<script>
+  // Add fade-in effect when the page loads
+  document.addEventListener("DOMContentLoaded", function () {
+    const fadeItems = document.querySelectorAll('.fade-item');
+    fadeItems.forEach((item, index) => {
+      setTimeout(() => {
+        item.classList.add('show');
+      }, index * 300); // Stagger the animation
+    });
+  });
+</script>
 
 
     <!-- CONTACT SECTION-->

@@ -1,0 +1,100 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+
+  #extra-curricular {
+    margin-top: 4rem;
+    padding: 2rem 0;
+    background-color: #0e0e0e;
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #extra-curricular:hover {
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+  
+  .certification-content {
+    color: #f0f0f0;
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+  
+  .certifications-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .certifications-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+    color: #ddd;
+  }
+  
+  .certifications-list li {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #444;
+    transition: background-color 0.3s ease;
+  }
+  
+  .certifications-list li:hover {
+    background-color: #c30162;
+    color: #fff;
+  }
+  
+  .certifications-list li:last-child {
+    border-bottom: none;
+  }
+  
+  /* TEXT STYLING */
+  .text-magenta {
+    color: #c30162;
+  }
+  
+  .fw-bold {
+    font-weight: 700;
+  }
+  
+  /* ADDING ANIMATION */
+  .fade-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .fade-item.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  @media (max-width: 768px) {
+    .certifications-list li {
+      font-size: 1rem;
+    }
+  
+    .certification-content {
+      font-size: 1rem;
+    }
+  }
+  
